@@ -1,0 +1,31 @@
+<html>
+  <head>
+    <title>Validaçãoo de email</title>
+  <style>
+	input:valid {
+  		border-color: powderblue;
+	}
+	input:invalid{
+  		border-color: red;
+	}
+  </style>
+  </head>
+  <body>
+    <input type='email' id='email'>
+    <button id='button'>Adicionar</button>
+  <script>
+	buttonEl = document.getElementById('button');
+	buttonEl.onclick = function(){
+   		inputEl = document.getElementById('email').value
+   		let gmail = inputEl.indexOf('@gmail');
+  		 let outlook = inputEl.indexOf('@outlook');
+   		let hotmail = inputEl.indexOf('@hotmail');
+  		if(gmail != -1 || outlook != -1 || hotmail != -1){
+     			alert('válido');
+   		}else{
+     			alert('inválido');
+   		}
+ 	}
+  </script>
+  </body>
+</html>
